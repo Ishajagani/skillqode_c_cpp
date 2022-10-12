@@ -4,31 +4,28 @@ class loc
 {
     int longitude,latitude;
     public:
-    loc();
-    loc(int,int);
-    void show();
-    loc operator + (loc);
-};
-loc :: loc()
-{
+    loc()
+    {
     longitude=0;
     latitude=0;
-}
-loc :: loc(int lg,int lt)
-{
+    }
+    loc(int lg,int lt)
+    {
     longitude =lg;
     latitude =lt;
-}
-void loc :: show()
-{
+    }
+    void show()
+    {
     cout<<"\n longitude :"<<longitude<<"";
     cout<<"\n latitude:"<<latitude<<"\n";
-}
-loc loc :: operator + (loc op2)
+    }
+    friend loc operator+(loc,loc);
+};
+loc operator+(loc op1, loc op2)
 {
     loc temp;
-    temp.longitude = longitude + op2.longitude;
-    temp.latitude = latitude + op2.latitude;
+    temp.longitude = op1.longitude + op2.longitude;
+    temp.latitude = op1.latitude + op2.latitude;
     return temp;
 }
 int main()
