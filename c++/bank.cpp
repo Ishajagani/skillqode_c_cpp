@@ -1,61 +1,90 @@
-#include<iostream>
+#include <iostream>
+#include <string.h>
 using namespace std;
 class bank
 {
-    string name;
-    int accountbalance,withdrawbalance,dipositebalanace,totalbalance,i;
-    public:
-    bank();
-    bank(int);
-    void showaccountbalance();
-    //void getaccinfo();
-    void showbankdetails();
-    void showtotalbalance();
-};
-/*void bank::getaccinfo()
-{
-    cout<<"\n YOUR NAME PLEASE :-";
-    cin>>name;
-}*/
-bank::bank()
-{  
-    accountbalance=1000;
-    cout<<"\n default constructor called ....";
-}
-bank::bank(int initbal)
-{
-    accountbalance=initbal;
-    cout<<"\n parameterized constructor called...";
-}
-void bank::showaccountbalance()
-{
-    cout<<"\n account balance :-" <<accountbalance;
-}
-void bank::showbankdetails()
-{
-    for(i=0;i<=5;i++)
+private:
+    char ac[15];
+    char nm[50];
+
+public:
+    int l, x;
+    void edetails()
     {
-    cout<<"\n your name please :-";
-    cin>>name;
-    cout<<"\n name :-"<<name;
-    cout<<"\n account balance:-"<<accountbalance;
-    showtotalbalance();
+    x:
+        cout << "\nEnter 7 Digits Account Number : ";
+        cin.getline(ac, 15);
+        l = strlen(ac);
+        if (l == 7)
+        {
+        }
+        else
+        {
+            cout << "\ninvalid Account Number!!!!";
+            goto x;
+        }
+        cout << "Enter Name : ";
+        cin.getline(nm, 50);
     }
-}
-void bank::showtotalbalance()
+    void details()
+    {
+        cout << "\n\n~~~~~~~~~~~~~~~~\n\nAccount number : " << ac;
+        cout << "\nName : " << nm;
+    }
+};
+class de : public bank
 {
-        cout << "\n enter withdrawbalance :-..";
-        cin >> withdrawbalance;
-        cout << "\n enter dipositebalanace :-..";
-        cin >> dipositebalanace;
-        withdrawbalance = accountbalance - withdrawbalance;
-        totalbalance = withdrawbalance + dipositebalanace;
-        cout << "\n totalbalance:-.."<<totalbalance;
-}
+protected:
+    int bb = 1000;
+    int de, wi, x, t;
+    int yn;
+
+public:
+    void dep()
+    {
+    x:
+        cout << "\nEnter Deposit amount : ";
+        cin >> de;
+        cout << "Enter more amount to deposit [1/0] : ";
+        cin >> yn;
+        bb += de;
+        if (yn == 1)
+        {
+            goto x;
+        }
+        else
+        {
+        }
+        cout << "\nYour bank Balance : " << bb;
+    }
+    void wit()
+    {
+    x:
+        cout << "\n\nEnter withdraw amount : ";
+        cin >> de;
+        cout << "Enter more amount to withdraw [1/0] : ";
+        cin >> yn;
+        bb -= de;
+        if (yn == 1)
+        {
+            goto x;
+        }
+        else
+        {
+        }
+        cout << "Your bank Balance : " << bb;
+    }
+    void display()
+    {
+        cout << "\nAccount balance : " << bb;
+    }
+};
 int main()
 {
-    bank person[3];
-    //person[1].getaccinfo();
-    person[1].showaccountbalance();
-    person[1].showbankdetails();
+    de a;
+    a.edetails();
+    a.dep();
+    a.wit();
+    a.details();
+    a.display();
 }
