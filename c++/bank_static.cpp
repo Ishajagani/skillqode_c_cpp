@@ -42,6 +42,7 @@ int Bank::total_deposite_amt=0;
 int Bank::total_withdraw_amt=0;
 int Bank::total_trans=0;
 
+
 int main()
 {
     system("CLS");
