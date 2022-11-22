@@ -1,52 +1,3 @@
-/*#include<stdio.h>
-#include<conio.h>
-#define pr printf
-#define SIZE 10
-int queue[SIZE],rear= -1,front = -1;
-int x;
-void insertqueue(int val)
-{
-    if(rear>SIZE)
-    {
-        pr("\n queue is ful");
-    }
-    else if(rear == front= -1)
-    {
-        front=rear=0;
-        queue[rear]=val;
-    }
-    else
-    {
-        pr("\n enter a value tpo be insertqueue");
-        scanf("%d");
-        queue[++rear]=val;
-    }
-}
-void deletequeue()
-{
-    if(front == -1)
-    {
-        pr("\n queue is empty");
-    }
-    else if(front=rear)
-    {
-        x=queue[front];
-        front=rear=-1;
-    }
-    else
-    {
-        pr("\n enter a value tpo be insertqueue");
-        scanf("%d");
-        x=queue[front++];
-    }
-}
-int main()
-{
-    insertqueue(10);
-    deletequeue();
-}*/
-
-
 #include<stdio.h>
 #define SIZE 10
 int front=-1,rear=-1,queqe[SIZE],i;
@@ -125,4 +76,5 @@ int main()
     }
     while(ch!=0);
 }
+
 
