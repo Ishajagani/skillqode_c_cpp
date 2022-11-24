@@ -1,24 +1,45 @@
-#include<stdio.h>
-#include<conio.h>
+/*#include <stdio.h>
 int main()
 {
-    int arr[10], i, num, x;
-    printf("\nenter number of elements of an aray:\n"); 
-    scanf("%d",&n);
-    printf("\nenter element:\n");
-    for(i=0; i<10; i++)
-        scanf("%d", &a[i]);
-    printf("\nEnter a Number to Search: ");
-    scanf("%d", &num);
-    for(i=0; i<10; i++)
+  int a[100],x, i, n;
+
+  printf("Enter number of elements in array\n");
+  scanf("%d", &n);
+
+  printf("Enter %d integer\n", n);
+
+  for (i = 0; i < n; i++)
+    scanf("%d", &a[i]);
+
+  printf("Enter a number to search\n");
+  scanf("%d", &x);
+
+  for (i = 0;i < n; i++)
+  {
+    if (a[i] == x)  
     {
-        if(num == a[i])
-        {
-            printf("\nnum found at location %d",i+1);
-            break;
-        }
-        if(i>10)
+      printf("%d is present at location %d.\n", x,i+1);
     }
-    printf("\nFound at Index No.%d", x);
-    return 0;
+  }
+  return 0;
+}*/
+#include<stdio.h>
+#include<stdlib.h>
+#define pr printf 
+//#define SIZE 10
+int main()
+{
+    int a[]={11,12,13,14,15,16,17,18,19,20},n,x,i;
+
+    printf("Enter a number to search\n");
+    scanf("%d", &x);
+
+    for (i = 0;i < n; i++)
+    {
+        if (a[i] == x)  
+        {
+            printf("%d is present at location %d.\n", x,i+1);
+        }
+    }
+    
 }
