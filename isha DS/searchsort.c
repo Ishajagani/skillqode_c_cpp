@@ -97,6 +97,9 @@ int main()
             sorting();
             break;
         case 3:
+            bubblesort();
+            break;
+        case 4:
             linearsearch();
             break;
         case 4:
