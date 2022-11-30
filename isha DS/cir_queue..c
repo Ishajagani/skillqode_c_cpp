@@ -1,11 +1,11 @@
 #include <stdio.h>
 #define Size 5
 int queue[Size];
-int front = 0 ;
-int rear = 0;
+int front = -1 ;
+int rear = -1;
 void insert_queue(int added_item)
 {
-    if (front == 0 && rear == 0)
+    if (front == -1 && rear == -1)
     {
         front = 0;
         rear = 0;
@@ -23,15 +23,15 @@ void insert_queue(int added_item)
 }
 int delete_queue()
 {
-    if ((front == 0) && (rear == 0))
+    if ((front == -1) && (rear == -1))
     {
         printf("\nQueue is underflow..");
     }
     else if (front == rear)
     {
         printf("\nThe Deleted element is %d", queue[front]);
-        front = 0;
-        rear = 0;
+        front = -1;
+        rear = -1;
     }
     else
     {
@@ -41,7 +41,7 @@ int delete_queue()
 }
 void display_queue()
 {
-    if (front == 0)
+    if (front == -1)
     {
         printf("\nQueue is Empty");
         return;
