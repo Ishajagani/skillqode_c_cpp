@@ -114,7 +114,7 @@ else
     {
         printf("%d",deque_arr[front_pos]);
         front_pos++;
-    }
+    }                
 }
 printf("\n");
 }
