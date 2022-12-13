@@ -35,4 +35,23 @@ print(" example of relational opertors");
    print("${employee1--}");
    print("${--employee1}");
   
+//assignment opertors
+    print("example of assignment opertors");
+  
+  print("${employee1-=employee2}");
+  print("${employee1+=employee2}");
+  print("${employee1*=employee2}");
+  print("${employee1%=employee2}");
+  
+//bitwise operator
+  print("example of bitwise operator");
+  
+  var x = 100 , y=20;
+  
+  print("x & y = ${x & y}");
+  print("x | y = ${x | y}");
+  print("x << 2 = ${x << 2}");
+  print("x >> 2 = ${x >> 2}");
+  print("x ~ y = ${~x}");
+  print("x ^ y = ${x ^ y}");
 }

@@ -1,0 +1,45 @@
+class Data
+{
+  int valueone = 10;
+  int valuetwo = 20;
+  
+ void arithmetics_data()
+  {
+    print("total_marks :- $valueone + $valuetwo :- ${valueone + valuetwo }");
+    print("total_marks :- $valueone - $valuetwo  :- ${valueone - valuetwo }");
+    print("total_marks :- $valueone * $valuetwo - ${valueone * valuetwo }");
+    print("total_marks :- $valueone / $valuetwo  :- ${valueone / valuetwo }");
+    print("total_marks :- $valueone % $valuetwo :- ${valueone % valuetwo }");
+  }
+  void relational_data()
+  {
+    print("${valueone < valuetwo}");
+    print("${valueone > valuetwo}");
+    print("${valueone >= valuetwo}");
+    print("${valueone <= valuetwo}");
+    print("${valueone == valuetwo}");
+    print("${valueone != valuetwo}");
+  }
+  void logical_data()
+  {
+    print(10<5 && 10>5);
+    print(10<5 || 10>5);
+    print(!(10<5 || 10>5));
+  }
+  void unary_data()
+  {
+    print("${valueone++}");
+    print("${++valueone}");
+    print("${valueone--}");
+    print("${--valueone}");
+  }
+}
+void main()
+{
+  Data data = Data();
+  
+  data.arithmetics_data();
+  data.relational_data();
+  data.logical_data();
+  data.unary_data();
+}
