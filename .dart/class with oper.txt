@@ -1,0 +1,78 @@
+class Data {
+  dynamic valueOne = 10;
+  int valueTwo = 20;
+
+  void arithmeticsoperators() {
+    print("students :- $valueOne + $valueTwo :- ${valueOne + valueTwo}");
+    print("students :- $valueOne - $valueTwo  :- ${valueOne - valueTwo}");
+    print("students :- $valueOne * $valueTwo :- ${valueOne * valueTwo}");
+    print("students :- $valueOne / $valueTwo  :- ${valueOne / valueTwo}");
+    print("students :- $valueOne % $valueTwo :- ${valueOne % valueTwo}");
+  }
+
+  void relationaloperators() {
+    print("${valueOne < valueTwo}");
+    print("${valueOne > valueTwo}");
+    print("${valueOne >= valueTwo}");
+    print("${valueOne <= valueTwo}");
+    print("${valueOne == valueTwo}");
+    print("${valueOne != valueTwo}");
+  }
+
+  void logicaloperators() {
+    print(10 < 5 && 10 > 5);
+    print(10 < 5 || 10 > 5);
+    print(!(10 < 5 || 10 > 5));
+  }
+
+  void unaryoperators() {
+    print("${valueOne++}");
+    print("${++valueOne}");
+    print("${valueOne--}");
+    print("${--valueOne}");
+  }
+
+  void assinmentoperators() {
+    print("${valueOne += 10}");
+    print("${valueOne -= 10}");
+    print("${valueOne *= 10}");
+    //print("${valueone /=10}");
+  }
+
+  void bitwiseoperators() {
+    print("valueone & valuetwo = ${valueOne & valueTwo}");
+    print("valueone | valuetwo = ${valueOne | valueTwo}");
+    print("valueone ^ valuetwo = ${valueOne ^ valueTwo}");
+    print("valueone = ${~valueOne}");
+    print("valueone << 2valuetwo = ${valueOne << 2}");
+    print("valueone >> 2valuetwo = ${valueOne >> 2}");
+  }
+
+  void conditionaloperators() {
+    valueOne > valueTwo
+        ? print("\n valueone is greater")
+        : print("\n valueone is greater");
+  }
+
+  void typetestoperators() {
+    if (valueOne is! int) {
+      print("is true");
+    } else {
+      print("is false");
+    }
+  }
+}
+
+void main() {
+  Data data = Data();
+
+  data
+    ..arithmeticsoperators()
+    ..relationaloperators()
+    ..logicaloperators()
+    ..unaryoperators()
+    ..assinmentoperators()
+    ..bitwiseoperators()
+    ..conditionaloperators()
+    ..typetestoperators();
+}
